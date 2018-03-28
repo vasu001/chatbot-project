@@ -1,0 +1,105 @@
+body {
+    font-size: 16px !important;
+    background: #fff;
+    font-family: 'Josefin Sans';
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.bg-light {
+    background: #fff !important;
+    border: 0;
+}
+
+.navbar-brand {
+    font-size: 2rem !important;
+    color: dodgerblue !important;
+    font-weight: 700;
+    font-family: 'Josefin Slab', serif;
+}
+
+#showcase {
+    padding: 20rem 0rem 22rem;
+    margin-top: 4rem;
+}
+
+#showcase h1 {
+    margin-bottom: 2rem;
+    font-family: 'Josefin Slab', serif;
+}
+
+#showcase img {
+    width: 100;
+    margin-left: 0rem;
+    padding: 1rem;
+    margin-top: -3rem;
+    position: relative;
+}
+
+#showcase .showcase-right {
+    position: relative;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#about {
+    padding: 18rem 0%;
+}
+
+#about p {
+    padding: 10%;
+    height: 100%;
+    font-size: 1.2em;
+    font-family: 'Josefin Sans';
+    color: #000;
+}
+
+#services {
+    padding: 17.8rem 0%;
+}
+
+#services .info-left {
+    background: #f1f1f1;
+    padding: 5rem 0;
+    border-radius: 2rem;
+    height: 100%;
+}
+
+#services .info-left p {
+    padding-top: 20px;
+}
+
+#services .info-right {
+    background: #f1f1f1;
+    padding: 5rem 0;
+    border-radius: 2rem;
+    height: 100%;
+}
+
+#services .info-right p {
+    padding-top: 20px;
+}
+
+#contact {
+    padding: 17rem 0%; // background: gold;
+}
+
+#contact .link-left {
+    // background: #f1f1f1;
+    border-radius: 2rem;
+    height: 100%;
+}
+
+#contact .link-right {
+    // background: #f1f1f1;
+    border-radius: 2rem;
+    height: 100%;
+}

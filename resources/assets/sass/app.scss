@@ -1,0 +1,15 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+@import url("https://fonts.googleapis.com/css?family=Cinzel:700|Coiny|Josefin+Sans|Roboto|Roboto+Slab:400,700|Ubuntu");
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+// Variables
+@import "variables";
+// Bootstrap
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+// Custom CSS
+@import "style";
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
