@@ -102,6 +102,7 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
+    'log' => 'errorlog',
 
     'key' => env('APP_KEY'),
 
@@ -117,6 +118,7 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+    
 
     'providers' => [
 
@@ -221,5 +223,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
 
     ],
+
+    
 
 ];
