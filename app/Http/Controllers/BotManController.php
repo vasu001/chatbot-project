@@ -1,20 +1,10 @@
 <?php
 namespace App\Http\Controllers;
-@include('variables.php');
-// $data = [
-//             "name" => $name,
-//             "webact" => $webact,
-//             "webname" => $webname,
-//             "webbrand" => $webbrand,
-//             "webheader" => $webheader,
-//             "webheaderpara" => $webheaderpara
-//         ];
-
+use Illuminate\Support\Facades\DB;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Http\Conversations\ChatConversation;
-use BotMan\BotMan\Storages\Storage;
 
 use App\BotmanDB;
 
