@@ -4,11 +4,10 @@
     <div class="row my-5">
         <div class="col-md-8 h-100">
             <div class="link-left">
-                <div class="card">                   
+                <div class="card">
                     <div class="card-header">Message Form</div>
                     <div class="card-body">
-                        @include('inc.messages')
-                        {!! Form::open(['url' => '/contact/submit'], ['class' => 'container']) !!}
+                        @include('inc.messages') {!! Form::open(['url' => '/contact/submit'], ['class' => 'container']) !!}
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" required>

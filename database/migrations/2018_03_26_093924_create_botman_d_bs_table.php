@@ -19,7 +19,6 @@ class CreateBotmanDBsTable extends Migration
             $table->string('webact');
             $table->string('webname');
             $table->string('webbrand');
-            $table->string('webimage');
             $table->string('webheader');
             $table->string('webheaderpara');
             $table->timestamps();

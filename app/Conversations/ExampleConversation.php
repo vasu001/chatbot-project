@@ -27,7 +27,6 @@ class ExampleConversation extends Conversation
             if ($answer->isInteractiveMessageReply()) {
                 if ($answer->getValue() === 'joke') {
                     $joke = json_decode(file_get_contents('http://api.icndb.com/jokes/random'));
-                    // $joke = json_decode(file_get_contents('https://vasu001.github.io/template.json'));
                     $this->say($joke->value->joke);
                     
                 } else {

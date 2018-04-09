@@ -1,11 +1,20 @@
 <?php
-
 namespace App\Http\Controllers;
+@include('variables.php');
+// $data = [
+//             "name" => $name,
+//             "webact" => $webact,
+//             "webname" => $webname,
+//             "webbrand" => $webbrand,
+//             "webheader" => $webheader,
+//             "webheaderpara" => $webheaderpara
+//         ];
 
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Http\Conversations\ChatConversation;
+use BotMan\BotMan\Storages\Storage;
 
 use App\BotmanDB;
 
@@ -16,8 +25,8 @@ class BotManController extends Controller
      */
      public function index()
     {
-        $data = BotmanDB::orderby('id','asc')->paginate(10);
-        return view('botman.index')->with('botman_d_bs', $data);
+        $data = BotmanDB::all();
+        return view('storeInfo')->with('botman_d_bs', $data);
     }
 
     public function handle()
@@ -57,14 +66,17 @@ class BotManController extends Controller
         $bot->webact = $request->input('webact');
         $bot->webname = $request->input('webname');
         $bot->webbrand = $request->input('webbrand');
-        $bot->webimage = $request->input('webimage');
-        $bot->webimage = $request->input('webheader');
-        $bot->webheaderpara = $request->input('webheaderpara');
-        
+        $bot->webheader = $request->input('webheader');
+        $bot->webheaderpara = $request->input('webheaderpara');     
 
         $bot->save();
 
 
         return redirect('/storeinfo')->with('success', 'Data Stored');
+    }
+    public function getBots(){
+        $bots = BotmanDB::all();
+
+        return view('storeInfo')->with('bots', $bots);
     }
 }

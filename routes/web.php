@@ -15,6 +15,10 @@ Route::get('/test', function(){
     return view('test');
 });
 
+Route::get('/template', function(){
+    return view($templates->code);
+});
+
 // Return Main Index Page
 Route::get('/', 'PagesController@getIndex');
 
@@ -38,6 +42,6 @@ Route::post('/contact/submit', 'MessagesController@submit');
 Route::get('/storeMessages', 'MessagesController@getMessages');
 
 // Botman
-Route::post('/store', 'BotmanController@submit');
-Route::get('/storeinfo', 'TemplatesController@index');
-Route::resource('botman_d_bs', 'BotmanController');
+Route::post('/store', 'BotManController@submit');
+Route::get('/storeinfo', 'BotManController@getBots');
+Route::resource('botman_d_bs', 'BotManController');
