@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9ecc794d-81ae-4207-b945-195fdfdfd400" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/art.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/art.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/food.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/food.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/port.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/port.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/social.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/social.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/botman_d_bs/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/botman_d_bs/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/storeMessages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/storeMessages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tinker.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,32 +28,22 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BotManController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-937">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatConversation.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="e#43#79#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-299" />
+            <state relative-caret-position="584">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="103" lean-forward="true" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -54,9 +55,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/art.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/art.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/blog.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/food.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/port.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/social.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/botman_d_bs/start.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
       </list>
     </option>
   </component>
@@ -181,37 +189,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="botman-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="botman-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="botman-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="botman-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="botman-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Conversations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="botman-project" type="b2602c69:ProjectViewProjectNode" />
@@ -233,7 +217,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,25 +249,28 @@
       <updated>1522944703038</updated>
       <workItem from="1522944709938" duration="177000" />
       <workItem from="1523259546039" duration="570000" />
-      <workItem from="1523297437603" duration="4092000" />
+      <workItem from="1523297437603" duration="4361000" />
+      <workItem from="1523446559421" duration="2819000" />
+      <workItem from="1523450348988" duration="622000" />
+      <workItem from="1523498764677" duration="1174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4839000" />
+    <option name="totallyTimeSpent" value="9723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.2320442" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50159913" side_tool="true" weight="0.19889502" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12526652" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.25303867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -308,29 +294,139 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-937">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="660">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/test.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tinker.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299" />
+        <state relative-caret-position="704">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
+          <folding>
+            <element signature="e#42#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="119" column="11" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+          <folding>
+            <element signature="e#42#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
           <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
-            <element signature="e#43#79#0#PHP" expanded="true" />
+            <element signature="e#42#78#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Conversations/ChatConversation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2539">
+          <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
+          <folding>
+            <element signature="e#42#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/art.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/blog.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/food.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="38" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/port.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/social.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/botman_d_bs/start.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="103" lean-forward="true" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
         </state>
       </provider>
     </entry>

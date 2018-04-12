@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/test', function(){
-    return view('test');
-});
-
 Route::get('/template', function(){
     return view($templates->code);
 });
@@ -42,6 +38,6 @@ Route::post('/contact/submit', 'MessagesController@submit');
 Route::get('/storeMessages', 'MessagesController@getMessages');
 
 // Botman
-Route::post('/store', 'BotManController@submit');
+//Route::post('/store', 'BotManController@submit');
 Route::get('/storeinfo', 'BotManController@getBots');
 Route::resource('botman_d_bs', 'BotManController');

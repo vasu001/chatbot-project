@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="/template/Art_files/w3.css">
     <link href="/template/Art_files/css" rel="stylesheet" type="text/css">
     <style>
-        body {
-            font-family: "Raleway", Arial, sans-serif
-        }
-
         .w3-row img {
             margin-bottom: -8px
         }

@@ -11,18 +11,7 @@
     <link rel="stylesheet" href="/template/SocialMedia_files/w3-theme-blue-grey.css">
     <link rel="stylesheet" href="/template/SocialMedia_files/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <style>
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "Open Sans", sans-serif
-        }
-
-    </style>
+    
 </head>
 
 <body class="w3-theme-l5">

@@ -64,15 +64,7 @@
     <link rel="stylesheet" href="/template/StartUp_files/css(1)">
     <link rel="stylesheet" href="/template/StartUp_files/font-awesome.min.css">
     <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Raleway", sans-serif
-        }
+      
 
         body,
         html {

@@ -2,13 +2,13 @@
 
 namespace App\Http\Conversations;
 
-
 use Illuminate\Foundation\Inspiring;
 use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Outgoing\Question;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ChatConversation extends Conversation
 {
@@ -17,6 +17,7 @@ class ChatConversation extends Conversation
         return $this->ask('Hello! I am Webber, your personal webpage designer. What\'s your name?', function(Answer $answer) {
             $name = $answer->getText();
             $this->bot->typesAndWaits(1);
+
             $this->say('Welcome '.$name. ', let\'s create your new webpage!');
             $this->askWebpageActivity($name);
         });
@@ -112,10 +113,13 @@ class ChatConversation extends Conversation
             'webname' => $webname,
             'webbrand' => $webbrand,
             'webheader' => $webheader,
-            'webheaderpara' => $webheaderpara
+            'webheaderpara' => $webheaderpara,
+             'created_at' => Carbon::now()->toDateTimeString(),
+             'updated_at' => Carbon::now()->toDateTimeString()
         ]);
-        $this->bot->typesAndWaits(10);
-        $this->say('Your Page is ready: https://www.google.com');
+        $this->bot->typesAndWaits(5);
+        $this->say('Your webpage is generated.');
+        
     }
 
     public function run()
