@@ -12,7 +12,7 @@
                     @endif
 
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="/storeinfo" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <a href="/storeinfo" class="btn btn-primary btn-block w-50 text-center mt-5" target="_blank">Go to your page</a>
+            <a href="botman_d_bs" class="btn btn-primary btn-block w-50 text-center mt-5" target="_blank">Go to your page</a>
         </div>
     </div>
 </div>

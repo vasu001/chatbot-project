@@ -35,16 +35,10 @@
     <div class="container">
         <div class="service">
             <h1>Services</h1>
-            <p>Choose from our two chatbot services</p>
+            <p>Choose our chatbot service</p>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <div class="info-left">
-                    <a class="btn btn-primary btn-lg" href="/login">General Bot</a>
-                    <p>This is a chatbot for normal talk. It's quite unpredictable.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-12 col-sm-12">
                 <div class="info-right">
                     <a class="btn btn-primary btn-lg" href="/login">Webber</a>
                     <p>This is a chatbot for those who want to build webpages through simple talk.</p>
@@ -81,7 +75,7 @@
                         <p>Create a new page using our chatbot or view your previously created pages</p>
                         <ul class="nav">
                             <li class="nav-item mr-auto"><a class="btn btn-primary nav-link" href="/home">New Page</a></li>
-                            <li class="nav-item ml-auto"><a class="btn btn-primary nav-link" href="/templates">My Templates</a></li>
+                            <li class="nav-item ml-auto"><a class="btn btn-primary nav-link" href="/botman_d_bs">My Templates</a></li>
                         </ul>
                     </div>
 

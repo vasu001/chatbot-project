@@ -15,8 +15,14 @@ class BotManController extends Controller
      */
      public function index()
     {
-        $data = BotmanDB::all();
-        return view('storeInfo')->with('botman_d_bs', $data);
+        $data = BotmanDB::orderby('id','desc')->paginate(3);
+        return view('botman_d_bs.index')->with('botman_d_bs', $data);
+    }
+    
+    public function show($id)
+    {
+        $bot = BotmanDB::find($id);
+        return view('botman_d_bs.show')->with('bot', $bot);
     }
 
     public function handle()
@@ -38,35 +44,10 @@ class BotManController extends Controller
      * Loaded through routes/botman.php
      * @param  BotMan $bot
      */
-    public function startConversation(BotMan $bot)
-    {
-        $bot->startConversation(new ExampleConversation());
-    }
 
     public function chatConversation(BotMan $bot)
     {
         $bot->startConversation(new ChatConversation());
         
-    }
-
-    public function submit(Request $request){
-        $bot = new BotmanDB;
-            
-        $bot->name = $request->input('name');
-        $bot->webact = $request->input('webact');
-        $bot->webname = $request->input('webname');
-        $bot->webbrand = $request->input('webbrand');
-        $bot->webheader = $request->input('webheader');
-        $bot->webheaderpara = $request->input('webheaderpara');     
-
-        $bot->save();
-
-
-        return redirect('/storeinfo')->with('success', 'Data Stored');
-    }
-    public function getBots(){
-        $bots = BotmanDB::all();
-
-        return view('storeInfo')->with('bots', $bots);
     }
 }

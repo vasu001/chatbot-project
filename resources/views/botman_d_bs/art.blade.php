@@ -3,9 +3,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ $bot->webname }}</title>
+    <title>{{ $bot->webTitle }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/template/Art_files/w3.css">
     <link href="/template/Art_files/css" rel="stylesheet" type="text/css">
     <style>
@@ -19,56 +20,95 @@
 <body>
 
     <!-- !PAGE CONTENT! -->
-    <div class="w3-content" style="max-width:1500px">
+    <div class="container" style="max-width:1500px">
 
         <!-- Header -->
         <header class="w3-container w3-xlarge w3-padding-24">
-            <a href="#" class="w3-left w3-button w3-white">{{$bot->name}}'s ART</a>
-            <a href="#about" class="w3-right w3-button w3-white">About</a>
+            <a href="#" class="w3-left">{{$bot->userName}}'s ART</a>
+            <a href="#about" class="w3-right">About</a>
         </header>
+        <div class="container">
 
-        <!-- Photo Grid -->
-        <div class="w3-row">
-            <div class="w3-half">
-                <img src="/template/Art_files/streetart.jpg" style="width:100%">
-                <img src="/template/Art_files/streetart2.jpg" style="width:100%">
-                <img src="/template/Art_files/streetart5.jpg" style="width:100%">
+            {{-- Welcome Paragraph --}}
+            <div class="jumbotron text-center">
+                <h1>
+                    {{$bot->welcomeHeading}}
+                </h1>
+                <p>{{$bot->welcomeTextPara}}</p>
+            </div>
+        
+            <!-- Photo Grid -->
+            <div class="w3-row jumbotron">
+                <div class="w3-half">
+                    <img src="/template/Art_files/streetart.jpg" style="width:100%">
+                    <img src="/template/Art_files/streetart2.jpg" style="width:100%">
+                    <img src="/template/Art_files/streetart5.jpg" style="width:100%">
+                </div>
+
+                <div class="w3-half">
+                    <img src="/template/Art_files/streetart3.jpg" style="width:100%">
+                    <img src="/template/Art_files/streetart4.jpg" style="width:100%">
+                </div>
             </div>
 
-            <div class="w3-half">
-                <img src="/template/Art_files/streetart3.jpg" style="width:100%">
-                <img src="/template/Art_files/streetart4.jpg" style="width:100%">
+            {{-- About Section --}}
+            <div class="jumbotron text-center" id="about">
+                <h2>About</h2>
+                <img src="/template/Art_files/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
+                <p>{{$bot->aboutTextPara}}</p>
+            </div>
+
+            <div class="jumbotron text-center bg-white">
+                <div class="container" id="contact">
+                    <h1 class="text-center">Contact Us</h1>
+
+                    <div class="row my-5">
+                        <div class="col-md-8 h-100">
+                            <div class="link-left">
+                                <div class="card">
+                                    <div class="card-header">Message Form</div>
+                                    <div class="card-body">
+                                        @include('inc.messages') {!! Form::open(['url' => '/contact/submitForArt'], ['class' => 'container']) !!}
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea class="form-control" placeholder="Enter message" name="message" id="message" rows="10" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                                        </div>
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 h-100 jumbotron">
+                            <div class="link-right px-5">
+                                <a target="_blank" href="mailto:vvasu001@gmail.com"><i class="fas fa-envelope fa-5x px-5"></i></a>
+                                <a target="_blank" href="https://twitter.com/obitothetobi"><i class="fab fa-twitter fa-5x px-5"></i></a>
+                                <a target="_blank" href="https://github.com/vasu001"><i class="fab fa-github fa-5x px-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- End Page Content -->
+        {{-- Footer --}}
+        <footer class="container-fluid bg-dark text-center text-white m-5 p-5">
+            <p>Powered by Chatbot &copy; 2018</p>
+        </footer>
     </div>
 
-    <!-- Footer / About Section -->
-    <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
-        <h2>About</h2>
-        <img src="/template/Art_files/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
-        <form style="margin:auto;width:60%" action="https://www.w3schools.com/action_page.php" target="_blank">
-            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
-            <div class="w3-section">
-                <label><b>Name</b></label>
-                <input class="w3-input w3-border" type="text" required="" name="Name">
-            </div>
-            <div class="w3-section">
-                <label><b>Email</b></label>
-                <input class="w3-input w3-border" type="text" required="" name="Email">
-            </div>
-            <div class="w3-section">
-                <label><b>Message</b></label>
-                <input class="w3-input w3-border" required="" name="Message">
-            </div>
-            <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
-        </form>
-        <br>
-        <p>Copyright &copy; 2018 by {{$bot->name}}</a>
-        </p>
-    </footer>
 </body>
 
 </html>

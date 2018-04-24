@@ -103,19 +103,11 @@
             origin: 'bottom'
         });
 
-        sr.reveal('.info-left', {
-            duration: 2000,
-            origin: 'left',
-            distance: '300px',
-            viewFactor: 0.2
-        });
-
         sr.reveal('.info-right', {
             duration: 2000,
-            origin: 'right',
-            distance: '300px',
-            viewFactor: 0.2
+            origin: 'bottom',
         });
+        
         sr.reveal('#contact', {
             duration: 2000,
             origin: 'bottom'

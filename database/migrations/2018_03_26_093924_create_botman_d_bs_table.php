@@ -15,12 +15,20 @@ class CreateBotmanDBsTable extends Migration
     {
         Schema::create('botman_d_bs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('webact');
-            $table->string('webname');
-            $table->string('webbrand');
-            $table->string('webheader');
-            $table->string('webheaderpara');
+            $table->string('userName')->nullable();
+            $table->string('webTemplate')->nullable();
+            $table->string('webTitle')->nullable();
+            $table->string('webpageBrand')->nullable();
+            $table->string('welcomeHeading')->nullable();
+            $table->string('welcomeHeadingDesignation')->nullable();
+            $table->string('welcomeTextPara')->nullable();
+            $table->string('aboutCatchPhrase')->nullable();
+            $table->string('aboutCatchPhraseSideLine')->nullable();
+            $table->string('aboutTextPara')->nullable();
+            $table->string('location')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('birthday')->nullable();
             $table->timestamps();
         });
     }

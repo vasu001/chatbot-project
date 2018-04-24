@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ $bot->webname }}</title>
+    <title>{{ $bot->webTitle }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/template/Portfolio_files/w3.css">
@@ -46,7 +46,7 @@
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
         <!-- Avatar image in top left corner -->
-        <img src="/template/Portfolio_files/avatar_smok.jpg" style="width:100%">
+        <img src="/template/Portfolio_files/avatar_smoke.jpg" style="width:100%">
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
                             <i class="fa fa-home w3-xxlarge"></i>
                             <p>HOME</p>
@@ -79,16 +79,17 @@
     <div class="w3-padding-large" id="main">
         <!-- Header/Home -->
         <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> {{ $bot->name }}</h1>
-            <p>Programmer and Web Designer.</p>
+            <h1 class="w3-jumbo"><span class="w3-hide-small">{{$bot->welcomeHeading}}</h1>
+            <p>{{$bot->welcomeHeadingDesignation}}</p>
             <img src="/template/Portfolio_files/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108">
         </header>
 
         <!-- About Section -->
         <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-            <h2 class="w3-text-blue">{{ $bot->name }}</h2>
+            <h2 class="w3-text-blue">{{ $bot->userName }}</h2>
             <hr style="width:200px" class="w3-opacity">
-            <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p>
+                {{$bot->aboutTextPara}}
             </p>
             <h3 class="w3-padding-16 w3-text-blue">My Skills</h3>
             <p class="w3-wide">Photography</p>
@@ -203,12 +204,12 @@
             <h2 class="w3-text-blue">Contact Me</h2>
             <hr style="width:200px" class="w3-opacity">
 
-            <div class="w3-section">
-                <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Your Location</p>
-                <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Your Phone</p>
-                <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+            <div class="w3-section w3-text-white">
+                <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> {{$bot->location}}</p>
+                <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> {{$bot->phone}}</p>
+                <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: {{$bot->email}}</p>
             </div><br>
-            <p>Lets get in touch. Send me a message:</p>
+            <p class="w3-text-white">Lets get in touch. Send me a message:</p>
 
             <form action="#" target="_blank">
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required="" name="Name"></p>

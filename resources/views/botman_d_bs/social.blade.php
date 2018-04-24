@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ $bot->webname }}</title>
+    <title>{{ $bot->webTitle }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/template/SocialMedia_files/w3.css">
@@ -20,7 +20,7 @@
     <div class="">
         <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>{{ $bot->webbrand }}</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>{{ $bot->webpageBrand }}</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -28,8 +28,8 @@
                 <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
                 <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
                     <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-                    <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-                    <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+                    <a href="#" class="w3-bar-item w3-button">Shivam posted on your wall</a>
+                    <a href="#" class="w3-bar-item w3-button">Pringle likes your post</a>
                 </div>
             </div>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
@@ -43,7 +43,7 @@
         <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">{{ $bot->name }} Profile</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">{{ $bot->userName }}'s Profile</a>
     </div>
 
     <!-- Page Container -->
@@ -55,12 +55,12 @@
                 <!-- Profile -->
                 <div class="w3-card w3-round w3-white">
                     <div class="w3-container">
-                        <h4 class="w3-center">{{ $bot->name }} Profile</h4>
+                        <h4 class="w3-center">{{ $bot->userName }}'s Profile</h4>
                         <p class="w3-center"><img src="/template/SocialMedia_files/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
                         <hr>
-                        <p><i class="fas fa-pencil-alt fa-fw w3-margin-right w3-text-theme"></i> Your Skills</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Your Location</p>
-                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> Your Birthday</p>
+                        <p><i class="fas fa-pencil-alt fa-fw w3-margin-right w3-text-theme"></i> {{$bot->email}}</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> {{$bot->location}}</p>
+                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> {{$bot->birthday}}</p>
                     </div>
                 </div>
                 <br>
@@ -110,7 +110,6 @@
                         <p>Interests</p>
                         <p>
                             <span class="w3-tag w3-small w3-theme-d5">News</span>
-                            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
                             <span class="w3-tag w3-small w3-theme-d3">Labels</span>
                             <span class="w3-tag w3-small w3-theme-d2">Games</span>
                             <span class="w3-tag w3-small w3-theme-d1">Friends</span>
@@ -155,7 +154,7 @@
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
                     <img src="/template/SocialMedia_files/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                     <span class="w3-right w3-opacity">1 min</span>
-                    <h4>John Doe</h4><br>
+                    <h4>Shivam Srivastava</h4><br>
                     <hr class="w3-clear">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="w3-row-padding" style="margin:0 -16px">
@@ -171,9 +170,9 @@
                 </div>
 
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-                    <img src="/template/SocialMedia_files/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                    <img src="/template/SocialMedia_files/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                     <span class="w3-right w3-opacity">16 min</span>
-                    <h4>Jane Doe</h4><br>
+                    <h4>Pringle Singh</h4><br>
                     <hr class="w3-clear">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
@@ -181,9 +180,9 @@
                 </div>
 
                 <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-                    <img src="/template/SocialMedia_files/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                    <img src="/template/SocialMedia_files/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                     <span class="w3-right w3-opacity">32 min</span>
-                    <h4>Angie Jane</h4><br>
+                    <h4>Pranjal Srivastava</h4><br>
                     <hr class="w3-clear">
                     <p>Have you seen this?</p>
                     <img src="/template/SocialMedia_files/nature.jpg" style="width:100%" class="w3-margin-bottom">
@@ -211,8 +210,8 @@
                 <div class="w3-card w3-round w3-white w3-center">
                     <div class="w3-container">
                         <p>Friend Request</p>
-                        <img src="/template/SocialMedia_files/avatar6.png" alt="Avatar" style="width:50%"><br>
-                        <span>Jane Doe</span>
+                        <img src="/template/SocialMedia_files/avatar2.png" alt="Avatar" style="width:50%"><br>
+                        <span>Shubham Chaubey</span>
                         <div class="w3-row w3-opacity">
                             <div class="w3-half">
                                 <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
@@ -245,10 +244,6 @@
     <br>
 
     <!-- Footer -->
-    <footer class="w3-container w3-theme-d3 w3-padding-16">
-        <h5>Footer</h5>
-    </footer>
-
     <footer class="w3-container w3-theme-d5">
         <p>Powered by Chatbot &copy; 2018</p>
     </footer>

@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/template', function(){
-    return view($templates->code);
-});
-
 // Return Main Index Page
 Route::get('/', 'PagesController@getIndex');
 
@@ -28,16 +24,12 @@ Auth::routes();
 // Return First Dashboard
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Return Templates Pages
-Route::resource('templates', 'TemplatesController');
-
 // Route to post method form submission
 Route::post('/contact/submit', 'MessagesController@submit');
+Route::post('/contact/submitForArt', 'MessagesController@submitForArt');
 
 // See messages
 Route::get('/storeMessages', 'MessagesController@getMessages');
 
 // Botman
-//Route::post('/store', 'BotManController@submit');
-Route::get('/storeinfo', 'BotManController@getBots');
 Route::resource('botman_d_bs', 'BotManController');

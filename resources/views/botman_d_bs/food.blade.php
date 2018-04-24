@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ $bot->webname }}</title>
+    <title>{{ $bot->webTitle }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/template/Food_files/w3.css">
@@ -33,7 +33,7 @@
         <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
             <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
             <div class="w3-right w3-padding-16">Mail</div>
-            <div class="w3-center w3-padding-16">{{ $bot->name }}'s Food</div>
+            <div class="w3-center w3-padding-16">{{ $bot->userName }}'s Food</div>
         </div>
     </div>
 
@@ -105,12 +105,12 @@
 
         <!-- About Section -->
         <div class="w3-container w3-padding-32 w3-center">
-            <h3>About Me, The Food Man</h3><br>
+            <h3>About Me, The Food Man!</h3><br>
             <img src="/template/Food_files/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
             <div class="w3-padding-32">
-                <h4><b>I am Who I Am!</b></h4>
-                <h6><i>With Passion For Real, Good Food</i></h6>
-                <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <h4><b>{{$bot->aboutCatchPhrase}}</b></h4>
+                <h6><i>{{$bot->aboutCatchPhraseSideLine}}</i></h6>
+                <p>{{$bot->aboutTextPara}}</p>
             </div>
         </div>
         <hr>
@@ -119,7 +119,6 @@
         <footer class="w3-row-padding w3-padding-32">
             <div class="w3-third">
                 <h3>FOOTER</h3>
-                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                 <p>Powered by Chatbot &copy; 2018</p>
             </div>
 
