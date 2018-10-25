@@ -12,7 +12,7 @@ This is a project for college final year. A chatbot that aims to make webpages. 
         127.0.0.1 localhost
         127.0.0.1 chatbot.localhost
   
-  and save the file.
+   and save the file.
 6. Go to xampp/apache/conf/extra/httpd-vhosts.conf file. Edit with following details:
 
         <VirtualHost *:80>
