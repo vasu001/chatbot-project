@@ -12,15 +12,16 @@ This is a project for college final year. A chatbot that aims to make webpages. 
   127.0.0.1 chatbot.localhost
    and save the file.
 6. Go to xampp/apache/conf/extra/httpd-vhosts.conf file. Edit with following details:
-  <VirtualHost *:80>
-    DocumentRoot "H:/xampp/htdocs"
-    ServerName localhost
-  </VirtualHost>
 
-  <VirtualHost *:80>
-      DocumentRoot "H:/xampp/htdocs/chatbot/public"
-      ServerName chatbot.localhost
-  </VirtualHost>
+        <VirtualHost *:80>
+          DocumentRoot "H:/xampp/htdocs"
+          ServerName localhost
+        </VirtualHost>
+        <VirtualHost *:80>
+            DocumentRoot "H:/xampp/htdocs/chatbot/public"
+            ServerName chatbot.localhost
+        </VirtualHost>  
+        
 7. Save the file and restart apache server using xampp controller.
 8. Now type chatbot.localhost/ in your browser to open the project.
 
