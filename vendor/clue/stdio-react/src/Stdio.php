@@ -2,8 +2,6 @@
 
 namespace Clue\React\Stdio;
 
-use Clue\React\Stdio\Io\Stdin;
-use Clue\React\Stdio\Io\Stdout;
 use Evenement\EventEmitter;
 use React\EventLoop\LoopInterface;
 use React\Stream\DuplexStreamInterface;
@@ -180,8 +178,7 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
         $this->ending = true;
 
         // clear readline output, close input and end output
-        $this->readline->setInput('')->setPrompt('')->clear();
-        $this->restoreTtyMode();
+        $this->readline->setInput('')->setPrompt('');
         $this->input->close();
         $this->output->end();
     }
@@ -196,8 +193,7 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
         $this->closed = true;
 
         // clear readline output and then close
-        $this->readline->setInput('')->setPrompt('')->clear()->close();
-        $this->restoreTtyMode();
+        $this->readline->setInput('')->setPrompt('');
         $this->input->close();
         $this->output->close();
     }
@@ -228,6 +224,8 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
     /** @internal */
     public function handleCloseInput()
     {
+        $this->restoreTtyMode();
+
         if (!$this->output->isWritable()) {
             $this->close();
         }
@@ -249,9 +247,9 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
         if (function_exists('readline_callback_handler_remove')) {
             // remove dummy readline handler to turn to default input mode
             readline_callback_handler_remove();
-        } elseif ($this->originalTtyMode !== null && $this->isTty()) {
+        } elseif ($this->originalTtyMode !== null && is_resource(STDIN) && $this->isTty()) {
             // Reset stty so it behaves normally again
-            shell_exec(sprintf('stty %s', $this->originalTtyMode));
+            shell_exec('stty ' . escapeshellarg($this->originalTtyMode));
             $this->originalTtyMode = null;
         }
 
@@ -281,14 +279,14 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
 
         if (function_exists('readline_callback_handler_install')) {
             // Prefer `ext-readline` to install dummy handler to turn on raw input mode.
-            // We will nevery actually feed the readline handler and instead
+            // We will never actually feed the readline handler and instead
             // handle all input in our `Readline` implementation.
             readline_callback_handler_install('', function () { });
             return $stream;
         }
 
         if ($this->isTty()) {
-            $this->originalTtyMode = shell_exec('stty -g');
+            $this->originalTtyMode = rtrim(shell_exec('stty -g'), PHP_EOL);
 
             // Disable icanon (so we can fread each keypress) and echo (we'll do echoing here instead)
             shell_exec('stty -icanon -echo');
@@ -341,15 +339,10 @@ class Stdio extends EventEmitter implements DuplexStreamInterface
         // For what it's worth, checking for device gid 5 (tty) is less reliable.
         // @link http://man7.org/linux/man-pages/man7/inode.7.html
         // @link https://www.kernel.org/doc/html/v4.11/admin-guide/devices.html#terminal-devices
-        if (is_resource(STDIN)) {
-            $stat = fstat(STDIN);
-            $mode = isset($stat['mode']) ? ($stat['mode'] & 0170000) : 0;
-            $major = isset($stat['dev']) ? (($stat['dev'] >> 8) & 0xff) : 0;
+        $stat = fstat(STDIN);
+        $mode = isset($stat['mode']) ? ($stat['mode'] & 0170000) : 0;
+        $major = isset($stat['dev']) ? (($stat['dev'] >> 8) & 0xff) : 0;
 
-            if ($mode === 0020000 && $major >= 2 && $major <= 143 && ($major <=5 || $major >= 128)) {
-                return true;
-            }
-        }
-        return false;
+        return ($mode === 0020000 && $major >= 2 && $major <= 143 && ($major <=5 || $major >= 128));
     }
 }

@@ -2,12 +2,12 @@
 
 namespace Clue\React\Stdio;
 
+use Clue\React\Term\ControlCodeParser;
+use Clue\React\Utf8\Sequencer as Utf8Sequencer;
 use Evenement\EventEmitter;
 use React\Stream\ReadableStreamInterface;
-use React\Stream\WritableStreamInterface;
 use React\Stream\Util;
-use Clue\React\Utf8\Sequencer as Utf8Sequencer;
-use Clue\React\Term\ControlCodeParser;
+use React\Stream\WritableStreamInterface;
 
 class Readline extends EventEmitter implements ReadableStreamInterface
 {
@@ -37,18 +37,18 @@ class Readline extends EventEmitter implements ReadableStreamInterface
         $this->output = $output;
 
         if (!$this->input->isReadable()) {
-            return $this->close();
+            $this->close();
+            return;
         }
         // push input through control code parser
         $parser = new ControlCodeParser($input);
 
         $that = $this;
         $codes = array(
-            "\n" => 'onKeyEnter',
-            "\x7f" => 'onKeyBackspace',
-            "\t" => 'onKeyTab',
-
-            "\x04" => 'handleEnd', // CTRL+D
+            "\n"   => 'onKeyEnter', // ^J
+            "\x7f" => 'onKeyBackspace', // ^?
+            "\t"   => 'onKeyTab', // ^I
+            "\x04" => 'handleEnd', // ^D
 
             "\033[A" => 'onKeyUp',
             "\033[B" => 'onKeyDown',
@@ -63,6 +63,16 @@ class Readline extends EventEmitter implements ReadableStreamInterface
 //          "\033[20~" => 'onKeyF10',
         );
         $decode = function ($code) use ($codes, $that) {
+            // The user confirms input with enter key which should usually
+            // generate a NL (`\n`) character. Common terminals also seem to
+            // accept a CR (`\r`) character in place and handle this just like a
+            // NL. Similarly `ext-readline` uses different `icrnl` and `igncr`
+            // TTY settings on some platforms, so we also accept CR as an alias
+            // for NL here. This implies key binding for NL will also trigger.
+            if ($code === "\r") {
+                $code = "\n";
+            }
+
             if ($that->listeners($code)) {
                 $that->emit($code, array($code));
                 return;
@@ -402,7 +412,7 @@ class Readline extends EventEmitter implements ReadableStreamInterface
      */
     public function limitHistory($limit)
     {
-        $this->historyLimit = $limit === null ? null : (int)$limit;
+        $this->historyLimit = $limit === null ? null : $limit;
 
         // limit send and currently exceeded
         if ($this->historyLimit !== null && isset($this->historyLines[$this->historyLimit])) {
@@ -432,9 +442,8 @@ class Readline extends EventEmitter implements ReadableStreamInterface
      *
      * @param callable|null $autocomplete
      * @return self
-     * @throws InvalidArgumentException if the given callable is invalid
+     * @throws \InvalidArgumentException if the given callable is invalid
      */
-
     public function setAutocomplete($autocomplete)
     {
         if ($autocomplete !== null && !is_callable($autocomplete)) {
@@ -489,27 +498,6 @@ class Readline extends EventEmitter implements ReadableStreamInterface
         }
 
         return $output;
-    }
-
-    /**
-     * Clears the current input prompt (if any)
-     *
-     * Usually, there should be no need to call this method manually. It will
-     * be invoked automatically whenever we detect that output needs to be
-     * written in place of the current prompt. The prompt will be rewritten
-     * after clearing the prompt and writing the output.
-     *
-     * @return self
-     * @see Stdio::write() which is responsible for invoking this method
-     * @internal
-     */
-    public function clear()
-    {
-        if ($this->prompt !== '' || ($this->echo !== false && $this->linebuffer !== '')) {
-            $this->output->write("\r\033[K");
-        }
-
-        return $this;
     }
 
     /** @internal */

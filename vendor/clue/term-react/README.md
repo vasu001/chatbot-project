@@ -1,4 +1,4 @@
-# clue/term-react [![Build Status](https://travis-ci.org/clue/php-term-react.svg?branch=master)](https://travis-ci.org/clue/php-term-react)
+# clue/reactphp-term [![Build Status](https://travis-ci.org/clue/reactphp-term.svg?branch=master)](https://travis-ci.org/clue/reactphp-term)
 
 Streaming terminal emulator, built on top of [ReactPHP](https://reactphp.org/)
 
@@ -104,18 +104,24 @@ $stream->on('c0', function ($code) {
 The recommended way to install this library is [through Composer](https://getcomposer.org).
 [New to Composer?](https://getcomposer.org/doc/00-intro.md)
 
+This project follows [SemVer](https://semver.org/).
 This will install the latest supported version:
 
 ```bash
-$ composer require clue/term-react:^1.1
+$ composer require clue/term-react:^1.2
 ```
 
 See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
 
+This project aims to run on any platform and thus does not require any PHP
+extensions and supports running on legacy PHP 5.3 through current PHP 7+ and
+HHVM.
+It's *highly recommended to use PHP 7+* for this project.
+
 ## Tests
 
 To run the test suite, you first need to clone this repo and then install all
-dependencies [through Composer](http://getcomposer.org):
+dependencies [through Composer](https://getcomposer.org):
 
 ```bash
 $ composer install
@@ -129,7 +135,10 @@ $ php vendor/bin/phpunit
 
 ## License
 
-MIT
+This project is released under the permissive [MIT license](LICENSE).
+
+> Did you know that I offer custom development services and issuing invoices for
+  sponsorships of releases and for contributions? Contact me (@clue) for details.
 
 ## More
 
@@ -137,7 +146,7 @@ MIT
   the underlying [react/stream](https://github.com/reactphp/stream) component.
 
 * If you want to process UTF-8 encoded console input, you may
-  want to use [clue/utf8-react](https://github.com/clue/php-utf8-react) on the resulting
+  want to use [clue/reactphp-utf8](https://github.com/clue/reactphp-utf8) on the resulting
   plain data stream.
 
 * If you want to to display or inspect the control codes, you may
@@ -146,5 +155,5 @@ MIT
   control byte sequences.
 
 * If you want to process standard input and output (STDIN and STDOUT) from a TTY, you may
-  want to use [clue/stdio-react](https://github.com/clue/php-stdio-react) instead of
+  want to use [clue/reactphp-stdio](https://github.com/clue/reactphp-stdio) instead of
   using this low-level library.

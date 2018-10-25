@@ -1,4 +1,4 @@
-# clue/stdio-react [![Build Status](https://travis-ci.org/clue/php-stdio-react.svg?branch=master)](https://travis-ci.org/clue/php-stdio-react)
+# clue/reactphp-stdio [![Build Status](https://travis-ci.org/clue/reactphp-stdio.svg?branch=master)](https://travis-ci.org/clue/reactphp-stdio)
 
 Async, event-driven and UTF-8 aware console input & output (STDIN, STDOUT) for
 truly interactive CLI applications, built on top of [ReactPHP](https://reactphp.org).
@@ -588,11 +588,11 @@ ob_start(function ($chunk) use ($stdio) {
 The recommended way to install this library is [through Composer](https://getcomposer.org).
 [New to Composer?](https://getcomposer.org/doc/00-intro.md)
 
-This project follows [SemVer](http://semver.org/).
+This project follows [SemVer](https://semver.org/).
 This will install the latest supported version:
 
 ```bash
-$ composer require clue/stdio-react:^2.1
+$ composer require clue/stdio-react:^2.2
 ```
 
 See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
@@ -625,7 +625,7 @@ Your only option would be to entirely
 However this package does work on [`Windows Subsystem for Linux`](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) 
 (or WSL) without issues. We suggest [installing WSL](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) 
 when you want to run this package on Windows.
-See also [#18](https://github.com/clue/php-stdio-react/issues/18) for more details.
+See also [#18](https://github.com/clue/reactphp-stdio/issues/18) for more details.
 
 ## Tests
 
@@ -644,12 +644,16 @@ $ php vendor/bin/phpunit
 
 ## License
 
-MIT
+This project is released under the permissive [MIT license](LICENSE).
+
+> Did you know that I offer custom development services and issuing invoices for
+  sponsorships of releases and for contributions? Contact me (@clue) for details.
 
 ## More
 
 * If you want to learn more about processing streams of data, refer to the documentation of
   the underlying [react/stream](https://github.com/reactphp/stream) component.
+
 * If you build an interactive CLI tool that reads a command line from STDIN, you
   may want to use [clue/arguments](https://github.com/clue/php-arguments) in
   order to split this string up into its individual arguments and then use

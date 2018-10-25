@@ -43,7 +43,7 @@ class FunctionalExampleTest extends TestCase
 
     public function testPeriodicExampleWithClosedInputAndOutputQuitsImmediatelyWithoutOutput()
     {
-        $output = $this->execExample('php 01-periodic.php <&- >&- 2>&1');
+        $output = $this->execExample('php 01-periodic.php <&- >&- 2>&-');
 
         if (strpos($output, 'said') !== false) {
             $this->markTestIncomplete('Your platform exhibits a closed STDIN bug, this may need some further debugging');
@@ -83,6 +83,20 @@ class FunctionalExampleTest extends TestCase
     public function testStubCanCloseStdoutAndIsNotWritable()
     {
         $output = $this->execExample('php ../tests/stub/03-close-stdout.php 2>&1');
+
+        $this->assertEquals('', $output);
+    }
+
+    public function testStubCanEndWithoutOutput()
+    {
+        $output = $this->execExample('php ../tests/stub/04-end.php');
+
+        $this->assertEquals('', $output);
+    }
+
+    public function testStubCanEndWithoutExtensions()
+    {
+        $output = $this->execExample('php -n ../tests/stub/04-end.php');
 
         $this->assertEquals('', $output);
     }
