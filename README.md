@@ -8,9 +8,11 @@ This is a project for college final year. A chatbot that aims to make webpages. 
 3. Edit env file in project to point to that database, localhost, password, etc.
 4. Run command, "php artisan migrate".
 5. Run notepad with administrator privilege, go to your system hosts file and add:
-  127.0.0.1 localhost
-  127.0.0.1 chatbot.localhost
-   and save the file.
+
+        127.0.0.1 localhost
+        127.0.0.1 chatbot.localhost
+  
+  and save the file.
 6. Go to xampp/apache/conf/extra/httpd-vhosts.conf file. Edit with following details:
 
         <VirtualHost *:80>
